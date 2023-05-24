@@ -12,6 +12,8 @@
 		0A6F83802A1B1884005D8C3E /* Experience.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F837F2A1B1884005D8C3E /* Experience.rcproject */; };
 		0A6F83822A1B1884005D8C3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F83812A1B1884005D8C3E /* Assets.xcassets */; };
 		0A6F83852A1B1884005D8C3E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0A6F83842A1B1884005D8C3E /* Preview Assets.xcassets */; };
+		0A6F838D2A1B1EC9005D8C3E /* HeartRateTry.rcproject in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F838C2A1B1EC9005D8C3E /* HeartRateTry.rcproject */; };
+		0A6F83912A1B6710005D8C3E /* HeartRateManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A6F83902A1B6710005D8C3E /* HeartRateManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,6 +23,9 @@
 		0A6F837F2A1B1884005D8C3E /* Experience.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; path = Experience.rcproject; sourceTree = "<group>"; };
 		0A6F83812A1B1884005D8C3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0A6F83842A1B1884005D8C3E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0A6F838C2A1B1EC9005D8C3E /* HeartRateTry.rcproject */ = {isa = PBXFileReference; lastKnownFileType = file.rcproject; name = HeartRateTry.rcproject; path = ../../HeartRateTry.rcproject; sourceTree = "<group>"; };
+		0A6F83902A1B6710005D8C3E /* HeartRateManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartRateManager.swift; sourceTree = "<group>"; };
+		0A6F83962A1C9D70005D8C3E /* healthmonitAR.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = healthmonitAR.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,9 +58,12 @@
 		0A6F837A2A1B1884005D8C3E /* healthmonitAR */ = {
 			isa = PBXGroup;
 			children = (
+				0A6F83962A1C9D70005D8C3E /* healthmonitAR.entitlements */,
 				0A6F837B2A1B1884005D8C3E /* AppDelegate.swift */,
 				0A6F837D2A1B1884005D8C3E /* ContentView.swift */,
+				0A6F83902A1B6710005D8C3E /* HeartRateManager.swift */,
 				0A6F837F2A1B1884005D8C3E /* Experience.rcproject */,
+				0A6F838C2A1B1EC9005D8C3E /* HeartRateTry.rcproject */,
 				0A6F83812A1B1884005D8C3E /* Assets.xcassets */,
 				0A6F83832A1B1884005D8C3E /* Preview Content */,
 			);
@@ -143,6 +151,8 @@
 				0A6F837E2A1B1884005D8C3E /* ContentView.swift in Sources */,
 				0A6F837C2A1B1884005D8C3E /* AppDelegate.swift in Sources */,
 				0A6F83802A1B1884005D8C3E /* Experience.rcproject in Sources */,
+				0A6F838D2A1B1EC9005D8C3E /* HeartRateTry.rcproject in Sources */,
+				0A6F83912A1B6710005D8C3E /* HeartRateManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,6 +278,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = healthmonitAR/healthmonitAR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"healthmonitAR/Preview Content\"";
@@ -275,6 +286,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to access your health data.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your health data.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to access your health data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
@@ -299,6 +313,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = healthmonitAR/healthmonitAR.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"healthmonitAR/Preview Content\"";
@@ -306,6 +321,9 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_NSCameraUsageDescription = "";
+				INFOPLIST_KEY_NSHealthClinicalHealthRecordsShareUsageDescription = "Allow this app to access your health data.";
+				INFOPLIST_KEY_NSHealthShareUsageDescription = "Allow this app to access your health data.";
+				INFOPLIST_KEY_NSHealthUpdateUsageDescription = "Allow this app to access your health data.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UIRequiredDeviceCapabilities = arkit;
