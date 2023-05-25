@@ -6,8 +6,8 @@
 //
 
 import SwiftUI
-import RealityKit
 import ARKit
+//import UIKit
 
 struct ARViewContainer: UIViewRepresentable {
     @Binding var heartRate: Double // Use a binding for heartRate
@@ -46,9 +46,12 @@ struct ARViewContainer: UIViewRepresentable {
             guard let faceAnchor = anchor as? ARFaceAnchor else { return }
 
             let textNode = SCNNode()
-            let textGeometry = SCNText(string: String(format: "%.0f", heartRate), extrusionDepth: 0.1)
+            let textGeometry = SCNText(string: String(format: "Your heart rate is: %.0f \n Your Heart rate is", heartRate), extrusionDepth: 0.1)
             
-//            let textGeometry = SCNText(string: "User", extrusionDepth: 0.5)
+            var font = UIFont(name: "Helvetica", size: 10)
+            textGeometry.font = font
+//            textGeometry.alignmentMode = center
+            
             textNode.geometry = textGeometry
             
             let material = SCNMaterial()
@@ -63,14 +66,5 @@ struct ARViewContainer: UIViewRepresentable {
 
             node.addChildNode(textNode) // Add the text node to the ARSCNView's node
         }
-        
     }
 }
-
-
-
-//struct ARViewContainer_Previews: PreviewProvider {
-//    static var previews: some View {
-//        ARViewContainer()
-//    }
-//}
