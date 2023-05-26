@@ -31,9 +31,11 @@ struct ContentView : View {
                         )
                         .font(.system(size: 15))
                     
-                    Text("Welcome to HealthMonitAR!")
+                    Text("Welcome to HealthMonitAR")
+                        .fontWeight(.bold)
                         .foregroundColor(.red)
                         .font(.system(size: 25))
+                    
                 }.padding(.top)
                 
                 
@@ -58,18 +60,11 @@ struct ContentView : View {
     }
     
     func fetchHeartRate() {
-        guard !isFetchingHeartRate else {
-            return
-        }
-        
         isFetchingHeartRate = true
         heartRateManager.requestAuthorization { fetchedHeartRate in
             DispatchQueue.main.async {
-//                if let fetchedHeartRate = fetchedHeartRate {
-//                    self.heartRate = fetchedHeartRate
-//                }
-                self.heartRate = fetchedHeartRate
-                self.isFetchingHeartRate = false
+                heartRate = fetchedHeartRate ?? 0.0
+                isFetchingHeartRate = false
             }
         }
     }
